@@ -5,7 +5,7 @@ import { ModulVue } from '../../utils/vue/vue';
 import RemoveUserSelectPlugin from './remove-user-select';
 
 
-describe('remove-user-select', () => {
+xdescribe('remove-user-select', () => {
     let localVue: VueConstructor<ModulVue>;
 
     beforeEach(() => {

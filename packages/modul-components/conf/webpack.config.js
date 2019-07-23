@@ -64,11 +64,11 @@ module.exports = function (env) {
         config.plugins.push(new ForkTsCheckerWebpackPlugin({
             tsconfig: isLib ? 'tsconfig.lib.json' : 'tsconfig.json',
             checkSyntacticErrors: true,
-            tslint: true,
+            tslint: '../../tslint.json',
             silent: isSilent
         }));
         config.plugins.push(new StyleLintPlugin({
-            configFile: '.stylelintrc',
+            configFile: '../../.stylelintrc',
             emitErrors: true
         }));
     }

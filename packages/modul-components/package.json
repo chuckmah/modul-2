@@ -9,7 +9,7 @@
         "reset": "rmdir /S /Q node_modules",
         "dev": "start-storybook --config-dir ./conf/storybook --port 8082 --static-dir ./conf/storybook/public",
         "buildWebpack": "webpack --config conf/webpack.config.js --env.lib --colors",
-        "build": "tsc --project tsconfig.lib.json && copyfiles -u 1 \"./src/**/*.json\" dist && copyfiles -u 1 \"./src/**/*.html\" dist && copyfiles -u 1 \"./src/**/*.scss\" dist && copyfiles -u 1 \"./src/**/*.css\" dist && npm run assetsToDist && npm run metagenv2",
+        "build": "tsc --project tsconfig.lib.json && copyfiles -u 1 \"./src/**/*.json\" dist && copyfiles -u 1 \"./src/**/*.html\" dist && copyfiles -u 1 \"./src/**/*.scss\" dist && copyfiles -u 1 \"./src/**/*.css\" dist && yarn run assetsToDist",
         "buildlib": "webpack --config conf/webpack.config.js --colors --env.lib",
         "assetsToDist": "copyfiles -u 1 \"./src/assets/**/*\" dist",
         "start": "webpack --config conf/webpack.config.js --env.openshift && http-server \"./dist\" -p 8080 -a 0.0.0.0",
@@ -18,9 +18,10 @@
         "metagen": "node ./tests/meta/meta-generator \"./src/components\" \"./dist/components\" && node ./tests/meta/meta-generator \"./src/mixins\" \"./dist/mixins\"",
         "metagenv2": "node -r ./tests/meta-v2/ts-loader.js  ./tests/meta-v2/generate-meta.ts ./dist",
         "test": "jest --ci -w 1 --silent --coverage --testResultsProcessor=./tests/jest/ci-test-processor && jest -w 1 --ci --silent --config ./conf/storybook/jest.config.storybook.js --verbose",
-        "tslint": "tsc --noEmit && tslint --project tsconfig.json -s node_modules/custom-tslint-formatters/formatters -t grouped ",
+        "tslint": "tsc --noEmit && tslint --project tsconfig.json -s nodemo _modules/custom-tslint-formatters/formatters -t grouped ",
         "tslint:ci": "tsc --noEmit && tslint --project tsconfig.json -t junit -o reports/junit/js-lint-results.xml ",
-        "prepack": "npm run clean && npm run build && npm run buildlib",
+        "prepare": "yarn run clean && yarn run build",
+        "prepack": "yarn run buildlib && yarn run metagenv2",
         "stats": "webpack --config conf/webpack.config.js --env.lib --env.silent --colors --profile --json > reports/stats.json && webpack-bundle-analyzer reports/stats.json",
         "print_version_win": "echo %npm_package_version%",
         "print_version_nx": "echo $npm_package_version",
@@ -140,14 +141,6 @@
         "webpack-cli": "^3.2.3",
         "webpack-dev-server": "^3.1.14"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ulaval/modul-components.git"
-    },
-    "engines": {
-        "node": ">= 8.0.0",
-        "npm": ">= 6.0.0"
-    },
     "browserslist": [
         "> 1%",
         "last 2 versions",
@@ -157,11 +150,5 @@
         "src/**/*.ts",
         "dist"
     ],
-    "license": "Apache-2.0",
-    "husky": {
-        "hooks": {
-            "commit-msg": "node conf/hooks/commit-msg.js",
-            "prepare-commit-msg": "node conf/hooks/prepare-msg.js"
-        }
-    }
+    "license": "Apache-2.0"
 }

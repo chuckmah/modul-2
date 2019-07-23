@@ -1,7 +1,128 @@
 {
-  "name": "root",
-  "private": true,
-  "devDependencies": {
-    "lerna": "^3.15.0"
-  }
+    "name": "@ulaval/modul",
+    "version": "1.0.0",
+    "description": "modUL Vue.js component library",
+    "private": true,
+    "author": "Charles Maheu <charles.maheu@dti.ulaval.ca>",
+    "homepage": "https://ulaval.github.io/modul/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ulaval/modul-components.git"
+    },
+    "license": "Apache-2.0",
+    "workspaces": {
+        "packages": [
+            "packages/*"
+        ]
+    },
+    "scripts": {
+        "bootstrap": "lerna bootstrap",
+        "prepare": "lerna run --stream --sort prepare",
+        "storybook": "start-storybook --config-dir ./conf/storybook --port 8082 --static-dir ./conf/storybook/public",
+        "storybook:openshift": "start-storybook --ci --config-dir ./conf/storybook --port 8080 --static-dir ./conf/storybook/public",
+        "test": "jest --verbose --silent && jest --config ./conf/storybook/jest.config.storybook.js --verbose --silent",
+        "test:ci": "jest --ci -w 1 --silent --coverage --testResultsProcessor=./tests/jest/ci-test-processor && jest -w 1 --ci --silent --config ./conf/storybook/jest.config.storybook.js --verbose --silent",
+        "test:update": "jest --verbose --silent --updateSnapshot && jest --config ./conf/storybook/jest.config.storybook.js --verbose --silent --updateSnapshot",
+        "lint": "tsc --noEmit && tslint --project tsconfig.json -s node_modules/custom-tslint-formatters/formatters -t grouped",
+        "lint:ci": "tsc --noEmit && tslint --project tsconfig.json -t junit -o reports/junit/js-lint-results.xml",
+        "print_version_win": "echo %npm_package_version%",
+        "print_version_nx": "echo $npm_package_version"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.3.4",
+        "@storybook/addon-a11y": "^5.1.8",
+        "@storybook/addon-actions": "^5.1.8",
+        "@storybook/addon-backgrounds": "^5.1.8",
+        "@storybook/addon-knobs": "^5.1.8",
+        "@storybook/addon-notes": "^5.1.8",
+        "@storybook/addon-storyshots": "^5.1.8",
+        "@storybook/addon-storysource": "^5.1.8",
+        "@storybook/addon-viewport": "^5.1.8",
+        "@storybook/vue": "^5.1.8",
+        "@types/cleave.js": "^1.4.0",
+        "@types/filesize": "^3.6.0",
+        "@types/jest": "^23.3.14",
+        "@types/node": "^10.12.20",
+        "@types/sprintf-js": "^1.1.0",
+        "@types/storybook__addon-actions": "^3.4.3",
+        "@types/storybook__addon-knobs": "^5.0.1",
+        "@types/storybook__addon-notes": "^4.0.2",
+        "@types/storybook__addon-storyshots": "^3.4.8",
+        "@types/storybook__vue": "^5.0.2",
+        "@types/webpack-env": "^1.13.6",
+        "@vue/test-utils": "^1.0.0-beta.29",
+        "acorn": "^6.0.0",
+        "autoprefixer": "^9.4.7",
+        "babel-loader": "^8.0.5",
+        "babel-plugin-dynamic-import-node": "^2.2.0",
+        "babel-plugin-require-context-hook": "^1.0.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-vue": "^2.0.2",
+        "copyfiles": "^1.2.0",
+        "cross-env": "^5.2.0",
+        "css-loader": "^2.1.0",
+        "custom-tslint-formatters": "^2.4.0",
+        "file-gen-cli": "^1.2.2",
+        "file-loader": "^3.0.1",
+        "fork-ts-checker-webpack-plugin": "^0.5.2",
+        "html-webpack-plugin": "^3.2.0",
+        "http-server": "^0.11.1",
+        "husky": "^1.3.1",
+        "is-property": "^1.0.2",
+        "jest": "^23.6.0",
+        "jest-html-reporter": "^2.4.4",
+        "jest-junit": "^3.6.0",
+        "jest-serializer-vue": "^2.0.2",
+        "node-html-parser": "^1.1.10",
+        "node-sass": "^4.11.0",
+        "postcss-loader": "^3.0.0",
+        "rimraf": "^2.6.2",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.1",
+        "stylelint": "^9.3.0",
+        "stylelint-config-standard": "^18.2.0",
+        "stylelint-scss": "^3.1.3",
+        "stylelint-webpack-plugin": "^0.10.5",
+        "svg-inline-loader": "^0.8.0",
+        "thread-loader": "^2.1.2",
+        "ts-jest": "^23.10.5",
+        "ts-loader": "^5.3.3",
+        "ts-morph": "^1.0.0",
+        "ts-node": "^7.0.1",
+        "tslint": "^5.14.0",
+        "tslint-config-standard": "^8.0.1",
+        "typescript": "^3.2.2",
+        "typescript-tslint-plugin": "^0.3.0",
+        "uglifyjs-webpack-plugin": "^2.1.2",
+        "url-loader": "^1.1.2",
+        "vue": "^2.5.23",
+        "vue-class-component": "^6.1.1",
+        "vue-loader": "^15.7.0",
+        "vue-property-decorator": "^6.0.0",
+        "vue-router": "^3.0.1",
+        "vue-server-renderer": "^2.5.23",
+        "vue-template-compiler": "^2.5.23",
+        "vue-template-loader": "^1.0.0",
+        "webpack": "^4.29.3",
+        "webpack-bundle-analyzer": "^3.3.2",
+        "webpack-cli": "^3.2.3",
+        "webpack-dev-server": "^3.1.14"
+    },
+    "jest-junit": {
+        "output": "reports/junit/js-test-results.xml"
+    },
+    "jest-html-reporter": {
+        "outputPath": "reports/junit/js-test-results.html",
+        "includeFailureMsg": true
+    },
+    "engines": {
+        "node": ">= 8.0.0",
+        "yarn": ">=1.3.2"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "node conf/hooks/commit-msg.js",
+            "prepare-commit-msg": "node conf/hooks/prepare-msg.js"
+        }
+    }
 }
