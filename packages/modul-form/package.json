@@ -1,0 +1,23 @@
+{
+    "name": "@chuckmah/modul-form",
+    "version": "1.0.0-beta.1",
+    "description": "TODO: description",
+    "author": "Charles Maheu <choc.mah@gmail.com>",
+    "private": false,
+    "homepage": "https://ulaval.github.io/modul/tree/master/packages/modul-form#readme",
+    "license": "Apache-2.0",
+    "directories": {
+        "lib": "lib",
+        "test": "__tests__"
+    },
+    "peerDependencies": {
+        "vue": "^2.5.9"
+    },
+    "files": [
+        "src/**/*.ts",
+        "dist"
+    ],
+    "scripts": {
+        "test": "echo \"Error: run tests from root\" && exit 1"
+    }
+}
