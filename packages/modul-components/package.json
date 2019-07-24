@@ -150,5 +150,8 @@
         "src/**/*.ts",
         "dist"
     ],
+    "publishConfig": {
+        "access": "public"
+    },
     "license": "Apache-2.0"
 }
