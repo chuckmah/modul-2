@@ -21,6 +21,12 @@
         "dist"
     ],
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1"
+        "clean": "rimraf dist",
+        "build": "tsc --project tsconfig.lib.json && copyfiles -u 1 \"./src/**/*.json\" dist && copyfiles -u 1 \"./src/**/*.html\" dist && copyfiles -u 1 \"./src/**/*.scss\" dist && copyfiles -u 1 \"./src/**/*.css\" dist && yarn run assetsToDist",
+        "assetsToDist": "copyfiles -u 1 \"./src/assets/**/*\" dist",
+        "prepare": "yarn run clean && yarn run build"
+    },
+    "dependencies": {
+        "@chuckmah/modul-components": "^1.0.0-beta.108"
     }
 }

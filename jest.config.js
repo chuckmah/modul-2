@@ -9,7 +9,7 @@ module.exports = {
         '<rootDir>/packages/'
     ],
     transform: {
-        "^.+\\.tsx?$": "ts-jest",
+        '^.+\\.(ts|js)$': 'ts-jest',
         "^.+\\.html(\\?style=\\..+)?$": "<rootDir>/tests/jest/vue-template-transformer.js"
     },
     testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
