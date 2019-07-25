@@ -1,4 +1,4 @@
-import { ModulVue } from '@chuckmah/modul-components/src/utils/vue/vue';
+import { ModulVue } from '@chuckmah/modul-components/dist/utils/vue/vue';
 import { ControlError } from '../../utils/form/control-error';
 import { FormGroup } from '../../utils/form/form-group';
 import { FormActionFallout } from './form-action-fallout';

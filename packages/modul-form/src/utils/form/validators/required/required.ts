@@ -1,5 +1,5 @@
-import { FormatMode } from '@chuckmah/modul-components/src/utils/i18n/i18n';
-import { ModulVue } from '@chuckmah/modul-components/src/utils/vue/vue';
+import { FormatMode } from '@chuckmah/modul-components/dist/utils/i18n/i18n';
+import { ModulVue } from '@chuckmah/modul-components/dist/utils/vue/vue';
 import { AbstractControl } from '../../abstract-control';
 import { ControlValidatorValidationType } from '../../control-validator-validation-type';
 import { FormControl } from '../../form-control';

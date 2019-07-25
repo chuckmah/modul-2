@@ -13,6 +13,11 @@
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "strictNullChecks": true,
+        "paths": {
+            "@chuckmah/modul-components/dist/*": [
+                "packages/modul-components/src/*"
+            ],
+        },
         "types": [
             "node",
             "jest",
@@ -33,6 +38,7 @@
         "dist",
         "**/node_modules",
         "conf/**",
-        "**/dist"
+        "packages/*/typings/**",
+        "**/dist/**"
     ]
 }
