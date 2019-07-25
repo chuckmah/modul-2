@@ -52,9 +52,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import { FormatMode } from '@chuckmah/modul-components/dist/utils/i18n/i18n';
-import { getString } from '@chuckmah/modul-components/dist/utils/str/str';
-import { ModulVue } from '@chuckmah/modul-components/dist/utils/vue/vue';
+import { FormatMode } from '@chuckmah/modul-components/src/utils/i18n/i18n';
+import { getString } from '@chuckmah/modul-components/src/utils/str/str';
+import { ModulVue } from '@chuckmah/modul-components/src/utils/vue/vue';
 import { Component, Emit, Prop, Watch } from 'vue-property-decorator';
 import { FormArray } from '../../utils/form/form-array';
 import { FormControl } from '../../utils/form/form-control';

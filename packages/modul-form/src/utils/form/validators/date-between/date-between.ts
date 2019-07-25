@@ -1,7 +1,7 @@
-import { dateFilter } from '@chuckmah/modul-components/dist/filters/date/date/date';
-import { FormatMode } from '@chuckmah/modul-components/dist/utils/i18n/i18n';
-import ModulDate from '@chuckmah/modul-components/dist/utils/modul-date/modul-date';
-import { ModulVue } from '@chuckmah/modul-components/dist/utils/vue/vue';
+import { dateFilter } from '@chuckmah/modul-components/src/filters/date/date/date';
+import { FormatMode } from '@chuckmah/modul-components/src/utils/i18n/i18n';
+import ModulDate from '@chuckmah/modul-components/src/utils/modul-date/modul-date';
+import { ModulVue } from '@chuckmah/modul-components/src/utils/vue/vue';
 import { ControlValidatorValidationType } from '../../control-validator-validation-type';
 import { FormControl } from '../../form-control';
 import { FormGroup } from '../../form-group';

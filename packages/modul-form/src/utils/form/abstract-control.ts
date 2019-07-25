@@ -1,4 +1,4 @@
-import { getString } from '@chuckmah/modul-components/dist/utils/str/str';
+import { getString } from '@chuckmah/modul-components/src/utils/str/str';
 import { ControlEditionContext } from './control-edition-context';
 import { ControlError } from './control-error';
 import { ControlOptions, FormControlOptions } from './control-options';

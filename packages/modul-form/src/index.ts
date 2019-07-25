@@ -1,8 +1,8 @@
-import MessagePlugin from '@chuckmah/modul-components/dist/components/message/message';
-import ToastPlugin from '@chuckmah/modul-components/dist/components/toast/toast';
-import I18nPlugin from '@chuckmah/modul-components/dist/utils/i18n/i18n';
-import ScrollToPlugin from '@chuckmah/modul-components/dist/utils/scroll-to/scroll-to';
-import ToastServicePlugin from '@chuckmah/modul-components/dist/utils/toast/toast-service.plugin';
+import I18nPlugin from '@chuckmah/modul-components/src/components/i18n/i18n';
+import MessagePlugin from '@chuckmah/modul-components/src/components/message/message';
+import ToastPlugin from '@chuckmah/modul-components/src/components/toast/toast';
+import ScrollToPlugin from '@chuckmah/modul-components/src/utils/scroll-to/scroll-to';
+import ToastServicePlugin from '@chuckmah/modul-components/src/utils/toast/toast-service.plugin';
 import { PluginObject } from 'vue';
 import { AbstractControlDirective } from './components/form/control-directive';
 import { ClearErrorToast, ErrorToast, FocusOnFirstError } from './components/form/fallouts/built-in-form-action-fallouts';

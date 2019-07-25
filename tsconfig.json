@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "target": "es5",
         "lib": [
             "es5",
@@ -18,6 +19,7 @@
             "webpack-env"
         ],
         "typeRoots": [
+            "./typings",
             "node_modules/@types"
         ],
         "plugins": [
@@ -28,8 +30,9 @@
     },
     "exclude": [
         "node_modules",
+        "dist",
         "**/node_modules",
-        "**/dist",
-        "conf/**"
+        "conf/**",
+        "**/dist"
     ]
 }

@@ -1,6 +1,6 @@
-import { FormatMode } from '@chuckmah/modul-components/dist/utils/i18n/i18n';
-import { getString } from '@chuckmah/modul-components/dist/utils/str/str';
-import { ModulVue } from '@chuckmah/modul-components/dist/utils/vue/vue';
+import { FormatMode } from '@chuckmah/modul-components/src/utils/i18n/i18n';
+import { getString } from '@chuckmah/modul-components/src/utils/str/str';
+import { ModulVue } from '@chuckmah/modul-components/src/utils/vue/vue';
 import { Component, Emit, Prop, Watch } from 'vue-property-decorator';
 import { AbstractControl } from '../../utils/form/abstract-control';
 import { ControlError } from '../../utils/form/control-error';

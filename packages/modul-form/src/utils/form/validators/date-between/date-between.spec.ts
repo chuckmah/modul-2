@@ -1,4 +1,4 @@
-import ModulDate from '@chuckmah/modul-components/dist/utils/modul-date/modul-date';
+import ModulDate from '@chuckmah/modul-components/src/utils/modul-date/modul-date';
 import { FormControl } from '../../form-control';
 import { ControlValidator } from '../control-validator';
 import { DateBetweenValidator } from './date-between';

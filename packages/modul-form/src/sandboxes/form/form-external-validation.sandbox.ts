@@ -1,4 +1,4 @@
-import { ModulVue } from '@chuckmah/modul-components/dist/utils/vue/vue';
+import { ModulVue } from '@chuckmah/modul-components/src/utils/vue/vue';
 import { PluginObject } from 'vue';
 import { Component } from 'vue-property-decorator';
 import FormPlugin, { FORM_NAME } from '../..';
