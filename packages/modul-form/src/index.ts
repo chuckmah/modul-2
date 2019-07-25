@@ -1,6 +1,7 @@
 import I18nPlugin from '@chuckmah/modul-components/src/components/i18n/i18n';
 import MessagePlugin from '@chuckmah/modul-components/src/components/message/message';
 import ToastPlugin from '@chuckmah/modul-components/src/components/toast/toast';
+import { FRENCH, Messages } from '@chuckmah/modul-components/src/utils/i18n/i18n';
 import ScrollToPlugin from '@chuckmah/modul-components/src/utils/scroll-to/scroll-to';
 import ToastServicePlugin from '@chuckmah/modul-components/src/utils/toast/toast-service.plugin';
 import { PluginObject } from 'vue';
@@ -28,6 +29,11 @@ export const FormPlugin: PluginObject<any> = {
         v.prototype.$log.debug(FORM_NAME, 'plugin.install');
 
         v.use(I18nPlugin);
+        const i18n: Messages = (v.prototype).$i18n;
+        if (i18n) {
+            i18n.addMessages(FRENCH, require('./components/form/form.lang.fr.json'));
+        }
+
         v.use(MessagePlugin);
         v.use(ToastPlugin);
         v.use(ToastServicePlugin);
