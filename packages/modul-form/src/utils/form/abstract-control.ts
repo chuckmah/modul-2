@@ -13,6 +13,8 @@ import { ControlValidator } from './validators/control-validator';
  */
 export abstract class AbstractControl {
     public htmlElement: HTMLElement | undefined;
+
+    // a left change
     protected readonly _validationGuard: ControlValidationGuard = DefaultValidationGuard;
     protected _parent: FormGroup | FormArray;
     protected _editionContext: ControlEditionContext = ControlEditionContext.None;
