@@ -2,6 +2,13 @@
     "npmClient": "yarn",
     "useWorkspaces": true,
     "version": "independent",
+    "command": {
+        "publish": {
+            "allowBranch": [
+                "master"
+            ]
+        }
+    },
     "publishConfig": {
         "access": "public"
     }
