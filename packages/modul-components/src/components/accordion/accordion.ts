@@ -118,6 +118,7 @@ export class MAccordion extends ModulVue implements AccordionGateway {
     }
 
     public get propDisabled(): boolean {
+        // a change
         return (isAccordionGroup(this.$parent) && this.$parent.disabled) ||
             this.disabled;
     }
