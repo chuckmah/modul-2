@@ -12,13 +12,12 @@ export const AbstractControlDirective: DirectiveOptions = {
     ): void {
         const control: AbstractControl = binding.value;
         const inputElements: NodeListOf<HTMLElement> = el.querySelectorAll(INPUT_SELECTOR);
-        // a leaf change 3
         if (inputElements.length > 0) {
             control.htmlElement = inputElements[0];
         } else {
             control.htmlElement = el;
         }
-
+        // im a hotfix baby
         if (control instanceof FormControl) {
             Object.defineProperty(el, 'ControlDirectiveListeners', {
                 value: {
