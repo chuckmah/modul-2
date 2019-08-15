@@ -1,6 +1,6 @@
 {
     "name": "@chuckmah/modul-form",
-    "version": "1.1.3",
+    "version": "1.2.0-alpha.0",
     "description": "TODO: description",
     "author": "Charles Maheu <choc.mah@gmail.com>",
     "private": false,
@@ -27,6 +27,6 @@
         "prepare": "yarn run clean && yarn run build"
     },
     "dependencies": {
-        "@chuckmah/modul-components": "^1.1.2"
+        "@chuckmah/modul-components": "^1.2.0-alpha.0"
     }
 }
