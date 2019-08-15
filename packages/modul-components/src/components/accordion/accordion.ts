@@ -65,7 +65,7 @@ export class MAccordion extends ModulVue implements AccordionGateway {
     })
     public disabled: boolean;
 
-    // a change
+    // a change 3
     @Prop({
         default: MAccordionSkin.Default,
         validator: value =>
