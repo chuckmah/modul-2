@@ -11,7 +11,7 @@ export const MAccordionTransition: VueConstructor<Vue> = Vue.extend({
     functional: true,
     render(createElement, context): VNode {
         const props: MAccordionTransitionProps = context.props as MAccordionTransitionProps;
-        // im a breaking change 5
+        // im a breaking change 6
         const CLASS_HAS_TRANSITION: string = 'm-accordion--has-transition';
         let data: VNodeData = {
             props: {
