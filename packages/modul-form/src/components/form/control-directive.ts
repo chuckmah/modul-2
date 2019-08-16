@@ -17,7 +17,8 @@ export const AbstractControlDirective: DirectiveOptions = {
         } else {
             control.htmlElement = el;
         }
-        // im a hotfix baby 4
+
+        // im a hotfix baby 5
         // im a breaking change 1
         if (control instanceof FormControl) {
             Object.defineProperty(el, 'ControlDirectiveListeners', {
