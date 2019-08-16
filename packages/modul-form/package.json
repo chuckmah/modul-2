@@ -27,6 +27,10 @@
         "prepare": "yarn run clean && yarn run build"
     },
     "dependencies": {
+<<<<<<< HEAD
         "@chuckmah/modul-components": "^1.4.0-alpha.0"
+=======
+        "@chuckmah/modul-components": "^1.3.0"
+>>>>>>> hotfix2/1
     }
 }
