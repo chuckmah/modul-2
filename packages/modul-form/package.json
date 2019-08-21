@@ -1,6 +1,6 @@
 {
     "name": "@chuckmah/modul-form",
-    "version": "1.8.2",
+    "version": "1.8.3-RC.0",
     "description": "TODO: description",
     "author": "Charles Maheu <choc.mah@gmail.com>",
     "private": false,
@@ -27,6 +27,6 @@
         "prepare": "yarn run clean && yarn run build"
     },
     "dependencies": {
-        "@chuckmah/modul-components": "^1.4.0"
+        "@chuckmah/modul-components": "^1.4.1-RC.0"
     }
 }
