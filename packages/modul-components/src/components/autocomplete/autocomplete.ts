@@ -17,7 +17,7 @@ export interface MAutoCompleteResult {
 @WithRender
 @Component
 export class MAutocomplete extends ModulVue {
-    // BC
+    // BC 2
     @Model('change')
     model: string;
     @Prop({ default: (): [] => [] })
